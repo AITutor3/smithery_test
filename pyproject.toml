@@ -17,6 +17,10 @@ dependencies = [
 dev = "smithery.cli.dev:main"
 playground = "smithery.cli.playground:main"
 
-# Points to your server function
-[tool.smithery] 
+# 빌드 시스템에 실제 패키지 위치 명시
+packages = [
+    { include = "my_server", from = "src" }
+]
+
+[tool.smithery]
 server = "my_server.server:create_server"
